@@ -1,0 +1,11 @@
+flowchart TD
+    Source[Approved case content] --> Normalize[Normalize and redact]
+    Normalize --> Chunk[Chunk with source metadata]
+    Chunk --> Embed[Generate embeddings]
+    Embed --> Index[(Vector store)]
+    Query[Authorized user query] --> Access[Apply access filters]
+    Access --> Retrieve[Hybrid or vector retrieval]
+    Index --> Retrieve
+    Retrieve --> Rank[Rank and deduplicate]
+    Rank --> Evidence[Evidence with source references]
+    Evidence --> Reason[Reasoning and grounded response]
