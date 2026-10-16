@@ -1,0 +1,17 @@
+sequenceDiagram
+    actor User as Case Manager
+    participant Agent as Copilot Agent
+    participant MCP as MCP Server
+    participant Reason as Reasoning Engine
+    participant RAG as RAG Service
+    participant API as Case Manager API
+    User->>Agent: Request closure explanation
+    Agent->>MCP: explain_case_closure(case_id)
+    MCP->>API: Verify access and load case context
+    API-->>MCP: Authorized case data
+    MCP->>Reason: Analyze case context
+    Reason->>RAG: Retrieve relevant evidence
+    RAG-->>Reason: Ranked passages with source IDs
+    Reason-->>MCP: Explanation, evidence, confidence
+    MCP-->>Agent: Structured result
+    Agent-->>User: Sourced explanation for review
