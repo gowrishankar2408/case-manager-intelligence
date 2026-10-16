@@ -1,0 +1,12 @@
+flowchart LR
+    User[Case Manager] --> Agent[Copilot Agent]
+    Agent --> MCP[MCP Server]
+    MCP --> API[Case Manager API]
+    MCP --> Reason[Reasoning Engine]
+    Reason --> RAG[RAG Service]
+    RAG --> Vector[(Vector Store)]
+    Extract[Extraction Service] --> API
+    Extract --> Repo[Knowledge Repository]
+    Repo --> RAG
+    Reason --> MCP
+    MCP --> Agent

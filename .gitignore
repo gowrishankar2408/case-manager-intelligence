@@ -218,3 +218,12 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local case data and generated indexes
+knowledge-repository/raw/**
+!knowledge-repository/raw/**/
+!knowledge-repository/raw/**/.gitkeep
+knowledge-repository/processed/**
+!knowledge-repository/processed/.gitkeep
+vector-db/chromadb/**
+!vector-db/chromadb/.gitkeep

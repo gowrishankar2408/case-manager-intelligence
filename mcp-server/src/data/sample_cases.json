@@ -1,0 +1,26 @@
+{
+    "CMI-1001": {
+        "status": "Closed",
+        "summary": "Customer confirmed issue resolved after configuration update.",
+        "closure_reason": "Configuration mismatch resolved.",
+        "priority": "High",
+        "owner": "Support Team",
+        "notes": [
+            "Customer reported authentication issue.",
+            "Configuration mismatch identified.",
+            "Settings corrected.",
+            "Customer confirmed successful login."
+        ],
+        "activities": [
+            "Case Created",
+            "Investigation Started",
+            "Configuration Updated",
+            "Validation Completed",
+            "Case Closed"
+        ],
+        "attachments": [
+            "authentication-analysis.pdf",
+            "resolution-report.pdf"
+        ]
+    }
+}
